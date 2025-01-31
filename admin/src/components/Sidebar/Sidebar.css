@@ -1,0 +1,113 @@
+.sidebar {
+    background-color: #FFF;
+    width: 15%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    padding-top: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 8;
+    box-shadow: 2px 0px 12px 0px rgba(0, 0, 0, 0.15);
+}
+
+.sortcut-links {
+    width: 100%;
+
+}
+.sortcut-links .side-links {
+    position: relative;
+    cursor: pointer;
+    padding: 8px 2px;
+    transition: 0.2s ease;
+}
+.sortcut-links i {
+    font-size: 18px;
+    margin-right: 12px;
+    color: var(--heading);
+}
+.sortcut-links .side-links:hover{
+    background-color: #fd7e14;
+}
+
+.side-links .side-links-item {
+    display: block;
+    padding: 5px 30px;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--heading);
+    color: #fd7e14;
+}
+
+.sortcut-links .side-links:hover .dropdown-down-arrow,
+.sortcut-links .side-links:hover .side-links-item{
+    color: white;
+} 
+.side-links .side-links-item .dropdown-down-arrow{
+    position: absolute;
+    right: 0;
+    color: #fd7e14;
+}
+.side-links .sub-menu{
+    margin-left: 40px;
+    transition: 0.2s ease;
+}
+.side-links .sub-menu .sub-menu-item{
+    display: block;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--heading);
+    color: white;
+}
+.side-links .sub-menu .sub-menu-item:hover{
+    color: white;
+    background-color: #484646c0;
+}
+.side-links .sub-menu .sub-menu-item:hover .dropdown-down-arrow{
+    color: white;
+}
+
+
+
+
+
+
+/* product */
+.sortcut-links .side-links.product-dropdownactive,
+.sortcut-links .side-links.order-dropdownactive{
+    background-color: #fd7e14;
+}
+.sortcut-links .side-links.product-dropdownactive .side-links-item,
+.sortcut-links .side-links.order-dropdownactive .side-links-item{
+    color: white;
+}
+.side-links.product-dropdownactive .side-links-item .dropdown-down-arrow,
+.side-links.order-dropdownactive .side-links-item .dropdown-down-arrow{
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .side-links:hover {
+    background-color: var(--orange);
+    color: #FFF;
+}
+
+.side-links:hover p {
+    background-color: var(--orange);
+    color: var(--white)
+} */
