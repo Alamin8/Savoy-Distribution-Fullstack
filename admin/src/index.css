@@ -74,4 +74,5 @@ hr{
   position: fixed;
   overflow: scroll;
   z-index: 6;
+  padding-bottom: 80px;
 }

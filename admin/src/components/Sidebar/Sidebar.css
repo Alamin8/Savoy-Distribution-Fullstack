@@ -77,15 +77,21 @@
 
 /* product */
 .sortcut-links .side-links.product-dropdownactive,
-.sortcut-links .side-links.order-dropdownactive{
+.sortcut-links .side-links.order-dropdownactive,
+.sortcut-links .side-links.category-dropdownactive,
+.sortcut-links .side-links.brand-dropdownactive{
     background-color: #fd7e14;
 }
 .sortcut-links .side-links.product-dropdownactive .side-links-item,
-.sortcut-links .side-links.order-dropdownactive .side-links-item{
+.sortcut-links .side-links.order-dropdownactive .side-links-item,
+.sortcut-links .side-links.category-dropdownactive .side-links-item,
+.sortcut-links .side-links.brand-dropdownactive .side-links-item{
     color: white;
 }
 .side-links.product-dropdownactive .side-links-item .dropdown-down-arrow,
-.side-links.order-dropdownactive .side-links-item .dropdown-down-arrow{
+.side-links.order-dropdownactive .side-links-item .dropdown-down-arrow,
+.side-links.category-dropdownactive .side-links-item .dropdown-down-arrow,
+.side-links.brand-dropdownactive .side-links-item .dropdown-down-arrow{
     color: white;
 }
 

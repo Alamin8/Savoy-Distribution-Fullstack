@@ -4,8 +4,10 @@ import { Link } from "react-router-dom";
 
 const Sidebar = () => {
   
-    const [productdrowpdown, setdropdown]=useState(false)
-    const [orderDrowpdown, setOrderDropdown]=useState(false)
+    const [productDropDown, setProductDropDown]=useState(false)
+    const [orderDropDown, setOrderDropdown]=useState(false)
+    const [categoryDropDown, setCategoryDropdown]=useState(false)
+    const [brandDropDown, setBrandDropdown]=useState(false)
 
   return (
     <div className="sidebar">
@@ -16,39 +18,73 @@ const Sidebar = () => {
         </div>
 
         {/* Product Dropdown */}
-        <div className={`side-links ${productdrowpdown ? 'product-dropdownactive' : ''}`}> 
-            <Link to='' className="side-links-item" onClick={()=>setdropdown(!productdrowpdown) }>
+        <div className={`side-links ${productDropDown ? 'product-dropdownactive' : ''}`}> 
+            <Link to='/products' className="side-links-item" onClick={()=>setProductDropDown(!productDropDown) }>
                 Products
                 {
-                    productdrowpdown==false ? <i className="fa-solid fa-angle-right dropdown-down-arrow"></i> : <i className="fa-solid fa-angle-down dropdown-down-arrow"></i>
+                    productDropDown==false ? <i className="fa-solid fa-angle-right dropdown-down-arrow"></i> : <i className="fa-solid fa-angle-down dropdown-down-arrow"></i>
                 }
             </Link>
             {
-                productdrowpdown==false ? <></>:
+                productDropDown==false ? <></>:
                     <div className="sub-menu">
-                    <Link to="/products" className="sub-menu-item"><p>All products</p></Link>
+                    <Link to="/products" className="sub-menu-item"><p>Products List</p></Link>
                     <Link to="/products/add" className="sub-menu-item"><p>Add Product</p></Link>
                 </div>
             }
         </div>
           
         {/* Order DropDown */}
-        <div className={`side-links ${orderDrowpdown ? 'order-dropdownactive' : ''}`}> 
-            <Link to='' className="side-links-item" onClick={()=>setOrderDropdown(!orderDrowpdown) }>
+        <div className={`side-links ${orderDropDown ? 'order-dropdownactive' : ''}`}> 
+            <Link to='/orders' className="side-links-item" onClick={()=>setOrderDropdown(!orderDropDown) }>
                 Orders
                 {
-                    orderDrowpdown==false ? <i className="fa-solid fa-angle-right dropdown-down-arrow"></i> : <i className="fa-solid fa-angle-down dropdown-down-arrow"></i>
+                    orderDropDown==false ? <i className="fa-solid fa-angle-right dropdown-down-arrow"></i> : <i className="fa-solid fa-angle-down dropdown-down-arrow"></i>
                 }
             </Link>
             {
-                orderDrowpdown==false ? <></>:
+                orderDropDown==false ? <></>:
                     <div className="sub-menu">
-                    <Link to="/orders" className="sub-menu-item"><p>All Orders</p></Link>
+                    <Link to="/orders" className="sub-menu-item"><p>Order List</p></Link>
                     <Link to="/orders/action" className="sub-menu-item"><p>Order Action</p></Link>
                 </div>
             }
         </div>
 
+        {/* Category DropDown */}
+        <div className={`side-links ${categoryDropDown ? 'category-dropdownactive' : ''}`}> 
+            <Link to='/category-list' className="side-links-item" onClick={()=>setCategoryDropdown(!categoryDropDown) }>
+                Category
+                {
+                    categoryDropDown==false ? <i className="fa-solid fa-angle-right dropdown-down-arrow"></i> : <i className="fa-solid fa-angle-down dropdown-down-arrow"></i>
+                }
+            </Link>
+            {
+                categoryDropDown==false ? <></>:
+                    <div className="sub-menu">
+                    <Link to="/category-list" className="sub-menu-item"><p>Category List</p></Link>
+                    <Link to="/category-add" className="sub-menu-item"><p>Add Category</p></Link>
+                </div>
+            }
+        </div>
+
+
+        {/* Brand DropDown */}
+        <div className={`side-links ${brandDropDown ? 'brand-dropdownactive' : ''}`}> 
+            <Link to='/brand-list' className="side-links-item" onClick={()=>setBrandDropdown(!brandDropDown) }>
+                Brand
+                {
+                    brandDropDown==false ? <i className="fa-solid fa-angle-right dropdown-down-arrow"></i> : <i className="fa-solid fa-angle-down dropdown-down-arrow"></i>
+                }
+            </Link>
+            {
+                brandDropDown==false ? <></>:
+                    <div className="sub-menu">
+                    <Link to="/brand-list" className="sub-menu-item"><p>Brand List</p></Link>
+                    <Link to="/brand-add" className="sub-menu-item"><p>Add Brand</p></Link>
+                </div>
+            }
+        </div>
 
       </div>
     </div>

@@ -1,5 +1,5 @@
 import express from 'express'
-import { addProduct, productList, removeProduct } from '../controllers/productController.js'
+import { addProduct, adminSearchProduct, productList, removeProduct, searchProduct, singleProduct } from '../controllers/productController.js'
 import multer from 'multer'
 
 
@@ -18,6 +18,9 @@ const upload = multer({storage:storage})
 productRouter.post("/add", upload.single("image"), addProduct)
 productRouter.get("/list", productList)
 productRouter.post("/remove", removeProduct)
+productRouter.get("/list/:id", singleProduct)
+productRouter.get("/search", searchProduct)
+productRouter.get("/adminSearch", adminSearchProduct)
 
 
 
